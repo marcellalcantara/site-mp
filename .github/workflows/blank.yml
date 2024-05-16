@@ -30,4 +30,4 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > site_chave.pem
           chmod 400 site_chave.pem 
           scp -o StrictHostKeyChecking=no -i site_chave.pem *.css *.html *.png ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com:/var/www/html/mp/
-          scp -o StrictHostKeyChecking=no -i site_chave.pem -r ./assets ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com:/var/www/html/mp/assets/
+        #scp -o StrictHostKeyChecking=no -i site_chave.pem -r ./assets ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com:/var/www/html/mp/assets/
